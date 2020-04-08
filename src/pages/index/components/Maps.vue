@@ -5,7 +5,7 @@
         <div>
             <div>
                 <label>
-                    Range
+                    Range (in metres)
                     <input v-model.number="range"/>
                     <div class="error"> {{rangeError}}</div>
                 </label>
@@ -66,6 +66,12 @@
                 if (this.rangeError != "" || this.numberError != "" || this.latError != "" || this.longError != "") return;
                 console.log("Sending POST request");
 
+                const m = document.getElementById('map');
+                const c = new google.maps.Map(m, {
+                    center: {lat: this.lat, lng: this.long},
+                    zoom: 15
+                });
+
                 fetch("http://localhost:5000/scooters/closest", {
                     method: "POST",
                     body: JSON.stringify({
@@ -80,7 +86,10 @@
                 })
                 .then((response) => response.json())
                 .then((data) => {
-                    console.log("Success: ", data);
+                    data.Map(e => new google.maps.Marker({
+                        position: new google.maps.LatLng(e.latitude, e.longitude),
+                        title: e.id
+                    })).Map(e => e.setMap(c));
                 });
         }
 
@@ -134,7 +143,6 @@
         }
 
         async mounted() {
-
             const m = document.getElementById('map');
             const c = new google.maps.Map(m, {
                 center: {lat: 1.3139991, lng: 103.7742101},
