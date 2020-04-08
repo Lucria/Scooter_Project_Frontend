@@ -23,13 +23,13 @@ VueJS.
 
 Using HTTPS:
 ```
-git clone https://github.com/Lucria/beam_intern_test.git
+git clone https://github.com/Lucria/beam_intern_test_frontend.git
 ```
 
 Using SSH:
 
 ```
-git clone git@github.com:Lucria/beam_intern_test.git
+git clone git@github.com:Lucria/beam_intern_test_frontend.git
 ```
 
 ## Restoring Node Packages
