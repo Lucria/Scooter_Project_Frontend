@@ -9,7 +9,7 @@ Vue.use(Router);
 
 const routes: RouteConfig[] = [
 	{path: '/', name: 'home', component: Maps, meta: {public: true, private: true}},
-	{path: '/about', name: 'about', component: About, meta: {public: true, private: true}},
+	{path: '/apis', name: 'apis', component: About, meta: {public: true, private: true}},
 	{path: '*', name: '404', component: NotFound, meta: {public: true, private: true}},
 	
 ];

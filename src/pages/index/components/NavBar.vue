@@ -2,7 +2,7 @@
     <div class="nav-bar">
         <div class="basic">
             <router-link class="nav" to="/">Home</router-link>
-            <router-link class="nav" to="/about">About</router-link>
+            <router-link class="nav" to="/apis">APIs</router-link>
         </div>
     </div>
 </template>
@@ -11,7 +11,7 @@
     .nav-bar, .basic, .users {
         display: flex;
         justify-content: center;
-        background: aquamarine;
+        background: #744aff;
     }
 
     .nav {
@@ -19,7 +19,7 @@
         padding: 5px 10px;
         font-size: 20px;
         text-decoration: none;
-        color: black;
+        color: white;
         display: block;
         cursor: pointer;
         border: 1px solid transparent;

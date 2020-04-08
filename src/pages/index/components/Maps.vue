@@ -52,7 +52,6 @@
 
     declare var google: any;
 
-
     @Component
     export default class Maps extends Vue {
 
