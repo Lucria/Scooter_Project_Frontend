@@ -1,8 +1,8 @@
 <template>
     <div>
-        <NavBar/> <!-- -->
+        <NavBar/>
         <h1>Beam Scooters Engineering Internship Exercise App</h1>
-        <router-view/> <!-- -->
+        <router-view/>
     </div>
 </template>
 

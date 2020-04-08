@@ -85,7 +85,7 @@
                     }
                 })
                 .then((response) => response.json())
-                .then((data) => {
+                .then((data:any[]) => {
                     data.Map(e => new google.maps.Marker({
                         position: new google.maps.LatLng(e.latitude, e.longitude),
                         title: e.id
